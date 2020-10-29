@@ -1,1 +1,22 @@
 <h1>Director #<%= @director_id %> details</h1>
+
+<a href="/directors">Go back</a>
+
+<dl>
+  <dt>Name</dt>
+  <dd><%= @director_name%></dd>
+  <dt>Dob</dt>
+  <dd><%= @director_dob%></dd>
+  <dt>Bio</dt>
+  <dd><%= @director_bio%></dd>
+  <dt>Image</dt>
+  <dd><img src ="<%= @director_image%>"></dd>
+  
+  <dt>Created at</dt>
+  <dd>about <%= @age_of_record%> years ago</dd>
+
+  
+  <dt>Updated at</dt>
+  <dd>about <%= @last_update%> years ago</dd>
+
+</dl>

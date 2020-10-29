@@ -12,12 +12,13 @@
     <tr>
       <td><%= dir.id %></td>
       <td>
-        <img src ="http://robohash.org/<%= dir.name %>">
+        <%# <img src ="http://robohash.org/<%= dir.name %>
+        <img src =<%= dir.image %>>
         </td>
       <td><%= dir.name %></td>
       <td><%= dir.dob %></td>
       <td>
-        <a href="/directors/<% dir.id %>">
+        <a href="/directors/<%= dir.id %>">
           Show details
         </a>
       </td>

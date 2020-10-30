@@ -27,6 +27,9 @@ class DirectorsController < ApplicationController
   #   @last_update = Date.today.year - director_updated_at.year
     the_id = params.fetch("dir_id")
     @the_director = Director.where({ :id => the_id }).first
+    @filmography = Movie.where({ :director_id => the_id })
+
+
     
 
     render({ :template => "director_templates/director_details.html.erb"})

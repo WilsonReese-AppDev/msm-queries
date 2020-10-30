@@ -55,6 +55,67 @@
   </dd>
 </dl>
 
+<h2>Filmography</h2>
+<table border="1">
+  <tbody><tr>
+    <th>
+      ID
+    </th>
+
+    <th>
+      Image
+    </th>
+
+    <th>
+      Title
+    </th>
+
+    <th>
+      Year
+    </th>
+
+    <th>
+      Director
+    </th>
+
+    <th>
+    </th>
+  </tr>
+
+  <% @filmography.each do |movie| %>
+    <tr>
+      <td>
+        <%= movie.id %>
+      </td>
+
+      <td>
+        <img src="<%= movie.image %>">
+      </td>
+
+      <td>
+        <%= movie.title %>
+      </td>
+
+      <td>
+        <%= movie.year %>
+      </td>
+
+      <td>
+        <% d = Director.where({ :id => movie.director_id }).first %>
+        <%= d.name %>
+      </td>
+
+      <td>
+        <a href="">
+          Show details
+        </a>
+      </td>
+    </tr>
+  <% end %>
+
+</tbody></table>
+<%# <h1><%=@filmography.title%></h1> %>
+
 <!--
 <dl>
   <dt>Name</dt>

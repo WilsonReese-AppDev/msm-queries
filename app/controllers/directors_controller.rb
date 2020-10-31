@@ -18,19 +18,6 @@ class DirectorsController < ApplicationController
   end
 
   def each_director
-  #   @list_of_directors = Director.all
-  #   @director_id = @list_of_directors.at(params.fetch("dir_id").to_i - 1).id
-  #   @director_name = @list_of_directors.at(params.fetch("dir_id").to_i - 1).name
-  #   @director_bio = @list_of_directors.at(params.fetch("dir_id").to_i - 1).bio
-  #   @director_image = @list_of_directors.at(params.fetch("dir_id").to_i - 1).image
-  #   @director_dob = @list_of_directors.at(params.fetch("dir_id").to_i - 1).dob
-    
-  #   require "date"
-  #   director_creation_date = @list_of_directors.at(params.fetch("dir_id").to_i - 1).created_at
-  #   director_updated_at = @list_of_directors.at(params.fetch("dir_id").to_i - 1).updated_at
-
-  #   @age_of_record = Date.today.year - director_creation_date.year
-  #   @last_update = Date.today.year - director_updated_at.year
     the_id = params.fetch("dir_id")
     @the_director = Director.where({ :id => the_id }).first
     @filmography = Movie.where({ :director_id => the_id })

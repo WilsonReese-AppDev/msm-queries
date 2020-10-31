@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   get("/directors/eldest", { :controller => "directors", :action => "wisest"})
   get("/directors/youngest", { :controller => "directors", :action => "littlest"})
   get("/directors/:dir_id", { :controller => "directors", :action => "each_director" })
+
+  get("/movies", { :controller => "movies", :action => "movie_index" })
 end
